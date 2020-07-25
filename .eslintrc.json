@@ -21,12 +21,10 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "_"
-      }
-    ],
+    "no-param-reassign": "off",
+    "no-unused-vars": ["warn", {
+      "argsIgnorePattern": "_"
+    }],
     "no-useless-constructor": "off",
     "@typescript-eslint/interface-name-prefix": [
       "error",
@@ -43,7 +41,10 @@
       {
         "ts": "never"
       }
-    ]
+    ],
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "argsIgnorePattern": "_"
+    }]
   },
   "settings": {
     "import/resolver": {
